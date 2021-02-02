@@ -1,0 +1,16 @@
+```SQL
+/* Write your T-SQL query statement below */
+select s.id,s.name
+from Students s
+left join departments d on s.department_id = d.id
+where s.department_id not in (
+select distinct(id)
+    from departments
+
+)
+
+
+
+```
+
+How to improve??
